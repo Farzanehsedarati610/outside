@@ -36,3 +36,11 @@ async function symbolicPing(endpoint) {
 }
 
 <div id="result"></div>
+.then(data => {
+  if (!data || typeof data !== 'object') {
+    throw new Error("Unexpected response format");
+  }
+  console.log("Success:", data);
+  document.getElementById("result").innerText = JSON.stringify(data, null, 2);
+})
+
