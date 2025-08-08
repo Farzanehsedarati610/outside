@@ -1,3 +1,4 @@
+<script>
 async function w() {(b818d555523674878848476ee8ffc99cff1c95529e3cc450511672922a4a5736)=((274971729)(200954710))}
 async function x() {(3e153176e6fcf704b9ebdb6cce4818ea6f276bcb42d4db72d6207df3434f3344)=((274971729)(200954710))}
 async function y() {(94e02b38274bfc81e66ea2e90f57f62faa2b5ae13e15bf89a3fc113881871e4e)=((274971729)(200954710))}
@@ -34,8 +35,9 @@ async function symbolicPing(endpoint) {
     console.error("Symbolic logic failed:", err);
   }
 }
-
+</script>
 <div id="result"></div>
+<script>
 .then(data => {
   if (!data || typeof data !== 'object') {
     throw new Error("Unexpected response format");
@@ -43,4 +45,6 @@ async function symbolicPing(endpoint) {
   console.log("Success:", data);
   document.getElementById("result").innerText = JSON.stringify(data, null, 2);
 })
+
+</script>
 
